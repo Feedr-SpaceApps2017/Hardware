@@ -3875,11 +3875,6 @@ Source: http://www.vishay.com/docs/10129/hpc0201a.pdf</description>
 <text x="-2.032" y="1.524" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-2.032" y="-2.159" size="0.6096" layer="27">&gt;VALUE</text>
 </package>
-<package name="FIDUCIA-MOUNT">
-<circle x="0" y="0" radius="0.5" width="2.1844" layer="29"/>
-<circle x="0" y="0" radius="1.5" width="0.127" layer="41"/>
-<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100"/>
-</package>
 <package name="CALVUS_5BAND_SMD_A10340_0MM_EXCLUSION">
 <wire x1="0" y1="0" x2="7.92" y2="0" width="0.127" layer="51"/>
 <wire x1="7.92" y1="0" x2="7.92" y2="27" width="0.127" layer="51"/>
@@ -4120,9 +4115,6 @@ Source: http://www.vishay.com/docs/10129/hpc0201a.pdf</description>
 <text x="-4.318" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="-7.62" y="0" visible="off" length="middle" direction="pas" function="dot"/>
 <pin name="2" x="7.62" y="0" visible="off" length="middle" direction="pas" function="dot" rot="R180"/>
-</symbol>
-<symbol name="FIDUCIAL">
-<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
 </symbol>
 <symbol name="ANTENNA_SYMBOL_GEN">
 <wire x1="0" y1="0" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
@@ -5580,18 +5572,6 @@ Source: &lt;a href= "http://www.amphenol.info/downloads/C707_10M006_512_2.pdf"&g
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="FIDUCIALMOUNT">
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="FIDUCIA-MOUNT">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -26953,9 +26933,6 @@ Source: AVX .. aphvc.pdf</description>
 <part name="RN4" library="resistor-dil" deviceset="4R-N" device="CAY16" value="1K"/>
 <part name="RN1" library="resistor-dil" deviceset="4R-N" device="CAY16" value="1K"/>
 <part name="RN2" library="resistor-dil" deviceset="4R-N" device="CAY16" value="1K"/>
-<part name="U$2" library="SmartPrj" deviceset="FIDUCIALMOUNT" device=""/>
-<part name="U$3" library="SmartPrj" deviceset="FIDUCIALMOUNT" device=""/>
-<part name="U$4" library="SmartPrj" deviceset="FIDUCIALMOUNT" device=""/>
 <part name="V3" library="testpad" deviceset="TP" device="PAD1-09"/>
 <part name="GND1" library="testpad" deviceset="TP" device="PAD1-09"/>
 <part name="V2" library="testpad" deviceset="TP" device="PAD1-09"/>
@@ -27075,7 +27052,6 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="AGND16" gate="VR1" x="73.66" y="177.8"/>
 <instance part="AGND17" gate="VR1" x="27.94" y="167.64"/>
 <instance part="C9" gate="G$1" x="462.28" y="127"/>
-<instance part="RN3" gate="A" x="411.48" y="157.48"/>
 <instance part="RN3" gate="B" x="414.02" y="144.78"/>
 <instance part="RN3" gate="C" x="401.32" y="142.24"/>
 <instance part="RN3" gate="D" x="396.24" y="134.62"/>
@@ -27235,8 +27211,6 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="AGND9" gate="VR1" x="71.12" y="215.9"/>
 <instance part="RN4" gate="A" x="327.66" y="154.94"/>
 <instance part="RN4" gate="B" x="337.82" y="147.32" rot="R270"/>
-<instance part="RN4" gate="C" x="320.04" y="147.32"/>
-<instance part="RN4" gate="D" x="320.04" y="139.7"/>
 <instance part="RN1" gate="A" x="436.88" y="177.8" rot="R270"/>
 <instance part="RN1" gate="B" x="424.18" y="185.42" rot="R180"/>
 <instance part="RN1" gate="C" x="454.66" y="205.74"/>
@@ -27245,9 +27219,6 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="RN2" gate="B" x="495.3" y="182.88" rot="R180"/>
 <instance part="RN2" gate="C" x="525.78" y="203.2"/>
 <instance part="RN2" gate="D" x="525.78" y="198.12"/>
-<instance part="U$2" gate="G$1" x="271.78" y="294.64"/>
-<instance part="U$3" gate="G$1" x="281.94" y="294.64"/>
-<instance part="U$4" gate="G$1" x="289.56" y="289.56"/>
 <instance part="V3" gate="G$1" x="215.9" y="160.02" smashed="yes" rot="R270">
 <attribute name="NAME" x="217.17" y="158.75" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="214.63" y="158.75" size="1.778" layer="97" rot="R270"/>
@@ -28594,6 +28565,30 @@ Source: AVX .. aphvc.pdf</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,22.86,172.72,U5P,GND,AGND,,,"/>
+<approved hash="104,1,22.86,187.96,U5P,VCC,+3V3,,,"/>
+<approved hash="104,1,33.02,172.72,U4P,GND,AGND,,,"/>
+<approved hash="104,1,33.02,187.96,U4P,VCC,+3V3,,,"/>
+<approved hash="104,1,279.4,241.3,U6,GND,AGND,,,"/>
+<approved hash="104,1,294.64,241.3,U6,VOUT,VBATT,,,"/>
+<approved hash="104,1,304.8,259.08,U6,TAB,AGND,,,"/>
+<approved hash="104,1,71.12,223.52,X2,GND,AGND,,,"/>
+<approved hash="104,1,83.82,228.6,X2G2,GND,AGND,,,"/>
+<approved hash="104,1,83.82,226.06,X2G3,GND,AGND,,,"/>
+<approved hash="104,1,83.82,223.52,X2G4,GND,AGND,,,"/>
+<approved hash="104,1,284.48,-48.26,Q9,VIN,+5V,,,"/>
+<approved hash="104,1,58.42,393.7,BT1,-,AGND,,,"/>
+<approved hash="104,1,68.58,393.7,BT1,+,+5V,,,"/>
+<approved hash="104,1,172.72,396.24,U1,VDD,+5V,,,"/>
+<approved hash="104,1,172.72,378.46,U1,VSS,AGND,,,"/>
+<approved hash="113,1,436.651,12.4714,FRAME1,,,,,"/>
+<approved hash="113,1,358.14,186.936,KEY,,,,,"/>
+<approved hash="113,1,312.42,156.456,D7,,,,,"/>
+<approved hash="113,1,358.14,177.919,POWER,,,,,"/>
+<approved hash="113,1,302.26,200.779,RESET,,,,,"/>
+<approved hash="115,1,33.02,396.24,AGND,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

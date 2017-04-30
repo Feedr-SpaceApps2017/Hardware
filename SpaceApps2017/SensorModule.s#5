@@ -21641,9 +21641,6 @@ rotated 45 deg.</description>
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND3" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND4" library="supply1" deviceset="AGND" device=""/>
-<part name="JP2" library="SmartPrj" deviceset="PINHD-1X8" device="TH" value="8x1F-H8.5-L14.5mm"/>
-<part name="JP1" library="SmartPrj" deviceset="PINHD-1X10" device="TH" value="10x1F-H8.5-L14.5mm"/>
-<part name="AGND10" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND11" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND12" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND13" library="supply1" deviceset="AGND" device=""/>
@@ -23154,8 +23151,6 @@ rotated 45 deg.</description>
 <text x="40.64" y="243.84" size="1.778" layer="91">soldered antenna</text>
 <text x="5.08" y="228.6" size="1.778" layer="91">SMA or U.FL connector</text>
 <text x="350.52" y="203.2" size="1.778" layer="91">jumper for always on</text>
-<text x="317.5" y="86.36" size="1.778" layer="91" rot="R90">arduino power</text>
-<text x="375.92" y="91.44" size="1.778" layer="91" rot="R90">arduino digital MSB</text>
 <text x="436.88" y="93.98" size="1.778" layer="96">SMF05C</text>
 <text x="129.54" y="152.4" size="1.778" layer="91" rot="R90">TX-&gt;</text>
 <text x="124.46" y="157.48" size="1.778" layer="91" rot="MR270">&lt;-RX</text>
@@ -23170,9 +23165,6 @@ rotated 45 deg.</description>
 <instance part="AGND2" gate="VR1" x="317.5" y="190.5"/>
 <instance part="AGND3" gate="VR1" x="375.92" y="170.18"/>
 <instance part="AGND4" gate="VR1" x="345.44" y="134.62"/>
-<instance part="JP2" gate="A" x="309.88" y="91.44"/>
-<instance part="JP1" gate="A" x="370.84" y="106.68"/>
-<instance part="AGND10" gate="VR1" x="347.98" y="99.06"/>
 <instance part="AGND11" gate="VR1" x="368.3" y="129.54"/>
 <instance part="AGND12" gate="VR1" x="444.5" y="165.1"/>
 <instance part="AGND13" gate="VR1" x="429.26" y="86.36"/>
@@ -23602,12 +23594,6 @@ rotated 45 deg.</description>
 <pinref part="AGND4" gate="VR1" pin="AGND"/>
 <pinref part="Q3" gate="G$1" pin="E"/>
 <pinref part="RN4" gate="B" pin="2"/>
-</segment>
-<segment>
-<wire x1="347.98" y1="104.14" x2="347.98" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="368.3" y1="109.22" x2="347.98" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="AGND10" gate="VR1" pin="AGND"/>
-<pinref part="JP1" gate="A" pin="4"/>
 </segment>
 <segment>
 <wire x1="368.3" y1="132.08" x2="368.3" y2="139.7" width="0.1524" layer="91"/>
@@ -24127,11 +24113,6 @@ rotated 45 deg.</description>
 </segment>
 </net>
 <net name="VIN" class="0">
-<segment>
-<wire x1="307.34" y1="83.82" x2="281.94" y2="83.82" width="0.1524" layer="91"/>
-<label x="281.94" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP2" gate="A" pin="8"/>
-</segment>
 <segment>
 <wire x1="182.88" y1="284.48" x2="182.88" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="294.64" x2="182.88" y2="294.64" width="0.1524" layer="91"/>

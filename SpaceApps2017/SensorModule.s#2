@@ -26796,6 +26796,60 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Vishay VEML6070">
+<packages>
+<package name="SOT-23-6">
+<wire x1="0.7" y1="1.5" x2="0.7" y2="-1.5" width="0.1524" layer="21"/>
+<wire x1="0.7" y1="-1.5" x2="-0.7" y2="-1.5" width="0.1524" layer="21"/>
+<wire x1="-0.7" y1="-1.5" x2="-0.7" y2="1.5" width="0.1524" layer="21"/>
+<wire x1="-0.7" y1="1.5" x2="0.7" y2="1.5" width="0.1524" layer="21"/>
+<circle x="-1.2" y="1.7" radius="0.2236" width="0.1524" layer="21"/>
+<smd name="2" x="-1.35" y="0" dx="1" dy="0.55" layer="1"/>
+<smd name="1" x="-1.35" y="0.95" dx="1" dy="0.55" layer="1"/>
+<smd name="3" x="-1.35" y="-0.95" dx="1" dy="0.55" layer="1"/>
+<smd name="4" x="1.35" y="-0.95" dx="1" dy="0.55" layer="1"/>
+<text x="0.0762" y="0.0794" size="0.762" layer="25" font="vector" ratio="10" rot="R270" align="center">&gt;NAME</text>
+<smd name="6" x="1.35" y="0.95" dx="1" dy="0.55" layer="1"/>
+<smd name="5" x="1.35" y="0" dx="1" dy="0.55" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="VISHAY_VEML6070">
+<wire x1="0" y1="0" x2="0" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="-15.24" x2="17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="17.78" y2="0" width="0.254" layer="94"/>
+<wire x1="17.78" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="-2.54" length="middle"/>
+<pin name="2" x="-5.08" y="-7.62" length="middle"/>
+<pin name="3" x="-5.08" y="-12.7" length="middle"/>
+<pin name="6" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="5" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="4" x="22.86" y="-12.7" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VISHAY_VEML6070">
+<gates>
+<gate name="A" symbol="VISHAY_VEML6070" x="-7.62" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-6">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+<connect gate="A" pin="4" pad="4"/>
+<connect gate="A" pin="5" pad="5"/>
+<connect gate="A" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -26955,6 +27009,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X4" device="" value="Soil Hydrometer"/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="R0201" value="100"/>
 <part name="C10" library="resistor" deviceset="C-EU" device="C0201" value="1u"/>
+<part name="U$1" library="Vishay VEML6070" deviceset="VISHAY_VEML6070" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -27283,6 +27338,7 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="JP2" gate="A" x="119.38" y="388.62"/>
 <instance part="R6" gate="G$1" x="60.96" y="381"/>
 <instance part="C10" gate="G$1" x="40.64" y="393.7"/>
+<instance part="U$1" gate="A" x="269.24" y="393.7"/>
 </instances>
 <busses>
 </busses>
@@ -27645,6 +27701,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="58.42" y1="396.24" x2="58.42" y2="393.7" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
 <junction x="40.64" y="396.24"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="A" pin="1"/>
+<wire x1="264.16" y1="391.16" x2="256.54" y2="391.16" width="0.1524" layer="91"/>
+<label x="248.92" y="391.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DISP_DATA" class="0">
@@ -28019,6 +28080,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="386.08" x2="66.04" y2="386.08" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="386.08" x2="66.04" y2="381" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="A" pin="6"/>
+<wire x1="292.1" y1="391.16" x2="299.72" y2="391.16" width="0.1524" layer="91"/>
+<label x="302.26" y="391.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RESET_ARDUINO" class="0">
@@ -28490,6 +28556,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="172.72" y1="391.16" x2="167.64" y2="391.16" width="0.1524" layer="91"/>
 <label x="162.56" y="391.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="A" pin="5"/>
+<wire x1="292.1" y1="386.08" x2="299.72" y2="386.08" width="0.1524" layer="91"/>
+<label x="302.26" y="386.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SDA" class="0">
 <segment>
@@ -28501,6 +28572,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="U1" gate="A" pin="SDA"/>
 <wire x1="208.28" y1="396.24" x2="213.36" y2="396.24" width="0.1524" layer="91"/>
 <label x="215.9" y="396.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="A" pin="3"/>
+<wire x1="264.16" y1="381" x2="256.54" y2="381" width="0.1524" layer="91"/>
+<label x="248.92" y="381" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
